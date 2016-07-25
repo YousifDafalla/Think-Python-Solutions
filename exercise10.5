@@ -1,0 +1,8 @@
+#This is a function that takes a list as a parameter and return True if the list
+#is sorted in ascending order and False otherwise
+def is_sorted(t):
+    for i in range(1,len(t)):
+        if t[i]<t[i-1]:
+            return False
+    return True
+    
