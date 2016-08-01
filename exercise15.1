@@ -1,0 +1,22 @@
+import math
+class Point():
+    """Represents a point in the 2-D space."""
+
+class Circle:
+    """Represents a circle"""
+
+ring=Circle()
+ring.center=Point()
+ring.radius=75
+ring.center.x=150
+ring.center.y=100
+
+def distance_between_points(p1,p2):
+    distance=math.sqrt(abs(p1.x-p2.x)**2+(abs(p1.y-p2.y)**2))
+    return distance
+
+def point_in_circle(circle,point):
+    if distance_between_points(circle.center,point)<=circle.radius:
+        return True
+    else:
+        return False
