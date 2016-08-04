@@ -1,0 +1,18 @@
+#This is a function that reads the file words.txt and builds a list with
+#one element per word version 2 of the function
+def read_words(file):
+    t=[]
+    for line in file:
+        words=line.split()
+        t=t+[words]
+    return t
+#This is a function that reads the file words.txt and builds a list with one
+#element per word
+def read_words1(file):
+    t=[]
+    for line in file:
+        words=line.split()
+        for word in words:
+            t.append(word)
+    return t
+        

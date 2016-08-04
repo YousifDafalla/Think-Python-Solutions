@@ -1,0 +1,28 @@
+#has duplicates is a function that takes a list and returns True if there is any
+#element that appears more than once
+#My first solution
+##def has_duplicates(t):
+##    for i in t:
+##        if t.count(i)>1:
+##            return True
+##    return False
+
+
+#My second Solution
+##def has_duplicates(t):
+##    for i in range(len(t)):
+##        for x in range(i+1,len(t)):
+##            if t[i]==t[x]:
+##                return True
+##    return False
+##        
+
+
+#The book's solution
+def has_duplicates(t):
+    s=t[:]
+    s.sort()
+    for i in range(len(s)-1):
+        if s[i]==s[i+1]:
+            return True
+    return False

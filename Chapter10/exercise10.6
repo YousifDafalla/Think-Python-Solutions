@@ -1,0 +1,16 @@
+#A function that check if two words are anagrams
+def is_anagram(word1,word2):
+##    if len(word1)!=len(word2):
+##        return False
+##    for i in word1:
+##        if i not in word2:
+##            return False
+    for i in word1:
+        if word1.count(i)!=word2.count(i):
+            return False
+    return True
+
+
+##Book Solutions:
+##def is_angram(t1,t2):
+##    return sorted(t1)==sorted(t2)

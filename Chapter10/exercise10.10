@@ -1,0 +1,24 @@
+##def in_bisect(t,a):
+##    middle=int(len(t)/2)
+##    if t[middle]==a:
+##        return middle
+##    elif t[middle]>a:
+##        return in_bisect(t[:middle],a)
+##    else:
+##        return (middle+in_bisect(t[middle:],a))
+
+def in_bisect(t,a):
+    min=0
+    max=len(t)-1
+    while True:
+        if min>max:
+            return None
+        i=(max+min)/2
+        if t[i]==a:
+            return i
+        elif t[i]>a:
+            max=i-1
+        else:
+            min=i+1
+            
+            
